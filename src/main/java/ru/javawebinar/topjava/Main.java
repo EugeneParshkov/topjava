@@ -6,6 +6,7 @@ package ru.javawebinar.topjava;
  */
 public class Main {
     public static void main(String[] args) {
+        System.getenv("TOPJAVA_ROOT");
         System.out.format("Hello TopJava Enterprise!");
     }
 }

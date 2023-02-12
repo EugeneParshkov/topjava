@@ -15,6 +15,14 @@
 </head>
 <body>
 <h3><a href="index.html">Home</a></h3>
+<hr>
+<h2>Meals</h2>
+
+<p><a href="meals?action=insert">Add Meal</a></p>
+
+<br>
+<br>
+
 <style>
     .red {
         color: red; /* Цвет символа */
@@ -38,7 +46,7 @@
 
     <tr style=" color :${meal.isExcess() ? 'red' : 'green'}">
         <td>${meal.getDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))}</td>
-        <td>${meal.getDescription()}</td>
+        <td><c:out value= "${meal.getDescription()}"/></td>
         <td>${meal.getCalories()}</td>
         <td><p><a href="">Update</a></p></td>
         <td><p><a href="">Delete</a></p></td>
